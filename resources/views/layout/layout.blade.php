@@ -2,6 +2,7 @@
 <head>
 	<title>{{$titulo}}</title>
 	<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 	<link type="image/png" rel="icon" href="{{URL::asset('assets/img/favicon.png')}}" />
 	<link rel="stylesheet" type="text/css" href="{{URL::asset('assets/css/bootstrap/css/bootstrap.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{URL::asset('assets/css/main.css')}}">
