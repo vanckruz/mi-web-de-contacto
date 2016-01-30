@@ -1,0 +1,118 @@
+#main-header{
+background: -webkit-linear-gradient(bottom, #0d53b4 0%, #3575b9 100%) repeat scroll 0 0 rgba(0,0,0,0);
+background: -o-linear-gradient(bottom, #0d53b4 0%, #3575b9 100%) repeat scroll 0 0 rgba(0,0,0,0);
+background: linear-gradient(to top, #0d53b4 0%, #3575b9 100%) repeat scroll 0 0 rgba(0,0,0,0);
+color:white;
+}
+
+#nombre a{
+	color:#fff;
+	font-size:.7em;
+	font-family: 'Kaushan Script', cursive;
+	text-decoration: none;
+}
+
+#mobile_button{
+	color:#fff;
+	font-size: 1.3em;
+}
+
+#mobile_menu li a{
+	text-align:center;
+}
+
+#menu_principal li a{
+	color:#fff;
+}
+#menu_principal li a:hover{
+	background: rgba(59, 137, 195, 0.9);
+}
+
+#caja_mobile_button{
+	padding: 1em 1em 0em 0em;
+}
+
+#caja_mobile_button a{
+	text-decoration:none;
+}
+
+.left{
+	float:left;
+}
+
+.right{
+	float:right;
+}
+
+#mobile_menu{
+	display: none;
+}
+
+#mobile_menu li a{
+	color:#fff;
+}
+
+#mobile_menu li a:hover{
+	background: rgba(59, 137, 195, 0.9);
+}
+
+#footer{
+	padding: 1.5em;
+}
+
+#titulo_footer{
+	color:#fff;
+	text-align: center;
+	font-size:1.5em;
+	font-family: 'Kaushan Script', cursive;
+}
+
+.white_c{
+	color:#fff;
+}
+.blue_c{
+	color:blue;
+}
+.lime_c{
+	color:lime;
+}
+.black_c{
+	color:#000;
+}
+
+.text_center{
+	text-align: center;
+}
+
+.section{
+	width: 100%;
+	min-height: 600px;
+}
+
+#f_inicio{
+	width: 80%;
+	margin: auto;
+	padding-top: 2.5em;
+	text-align: center;
+}
+
+#f_inicio img{
+	margin: auto;
+}
+
+#f_inicio p#f_nombre{
+	color:#fff;
+	font-size:3.5em;
+	font-family: 'Kaushan Script', cursive;	
+}
+
+#f_inicio p#f_descripcion{
+	color:#fff;
+	font-size:1.2em;
+	font-family: 'Kaushan Script', cursive;	
+}
+.items_titulos{
+	background:transparent;
+	padding: 1.5em;
+	font-size: 1.5em;
+}
