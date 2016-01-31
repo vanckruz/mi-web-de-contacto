@@ -7,9 +7,11 @@
 	<link rel="stylesheet" type="text/css" href="{{URL::asset('assets/css/bootstrap/css/bootstrap.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{URL::asset('assets/css/main.css')}}">
 	<script src="{{URL::asset('assets/js/jquery-2.2.0.min.js')}}"></script>
+	<script src="{{URL::asset('assets/js/paises.js')}}"></script>
 	<script src="{{URL::asset('assets/js/main.js')}}"></script>
 </head>
 <body>
+<div id="top_1"></div>
 <header id="main-header">
    <div class="container">
       <div class="row">
@@ -18,11 +20,11 @@
          </div>
          <div class="col-md-8 ">
             <ul id="menu_principal" class="nav navbar-nav navbar-right hidden-sm hidden-xs">
-               <li class="active"><a href="#">Inicio <span class="sr-only">(current)</span></a></li>
-               <li><a href="#">Sobre mi</a></li>
-               <li><a href="#">Habilidades</a></li>
-               <li><a href="#">Portafolio</a></li>
-               <li><a href="#">Contacto</a></li>
+               <li class="active"><a href="#section_inicio">Inicio <span class="sr-only">(current)</span></a></li>
+               <li><a href="#section_presentacion">Sobre mi</a></li>
+               <li><a href="#section_habilidades">Habilidades</a></li>
+               <li><a href="#section_portafolio">Portafolio</a></li>
+               <li><a href="#section_contacto">Contacto</a></li>
             </ul>
             <div id="caja_mobile_button" class="right">
             <a href="#" id="mobile_button" class="visible-xs visible-sm">
@@ -35,11 +37,11 @@
 
    <div class="visible-sm visible-xs">
       <ul id="mobile_menu" class="nav navbar-nav">
-       <li><a href="#">Inicio</a></li>
-       <li><a href="#">Sobre mi</a></li>
-       <li><a href="#">Habilidades</a></li>
-       <li><a href="#">Portafolio</a></li>
-       <li><a href="#">Contacto</a></li>
+       <li><a href="#section_inicio">Inicio</a></li>
+       <li><a href="#section_presentacion">Sobre mi</a></li>
+       <li><a href="#section_habilidades">Habilidades</a></li>
+       <li><a href="#section_portafolio">Portafolio</a></li>
+       <li><a href="#section_contacto">Contacto</a></li>
       </ul>
     </div>
 </header>
@@ -48,8 +50,11 @@
 	<div id="footer" style="background: url({{URL::asset('/assets/img/bg-footer.jpg')}})">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-12">
+				<div class="col-xs-12" style="text-align:center;">
 					<p id="titulo_footer">Jhonny Vasquez</p>
+					<a href="#top_1">
+					<img src="{{URL::asset('/assets/img/top.png')}}" style="float:right;width:30px;height:30px">
+					</a>
 				</div>
 			</div>
 			<hr style="border:1px dotted gray;">

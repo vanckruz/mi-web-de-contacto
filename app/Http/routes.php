@@ -13,6 +13,12 @@
 
 Route::get('/', 'IndexController@index');
 
+/*Route::post('/send_message', function(){
+    	print_r($_POST);
+});*/
+
+Route::post('/send_message', 'IndexController@Contacto');
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes

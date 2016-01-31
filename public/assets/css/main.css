@@ -28,6 +28,9 @@ color:white;
 #menu_principal li a{
 	color:#fff;
 }
+#menu_principal li.active a{
+	color:#000 !important;
+}
 #menu_principal li a:hover{
 	background: rgba(59, 137, 195, 0.9);
 }
@@ -65,6 +68,7 @@ color:white;
 }
 
 #titulo_footer{
+	display: inline-block;
 	color:#fff;
 	text-align: center;
 	font-size:1.5em;
@@ -90,7 +94,7 @@ color:white;
 
 .section{
 	width: 100%;
-	min-height: 600px;
+	min-height: 700px;
 }
 
 #f_inicio{
@@ -122,11 +126,11 @@ color:white;
 	font-size: 2em;
 	margin:auto;
 	text-align: center;
-	margin-top:1em;
+	margin-top:2.5em;
 	margin-bottom:1em;
 }
 
-#item_title_portafolio{
+#item_title_portafolio,#item_title_contacto{
 	border:1px solid white;
 	color:white;
 }
@@ -150,4 +154,39 @@ color:white;
 	background: #f1f1f1;
 	padding: 1em;
 	font-size:1.2em;
+}
+
+.input_contacto{
+	background: none;
+	border:1px solid #FFF;
+	border-radius:0px;
+	color:white;
+	font-size: 1.3em;
+	padding: 1em;
+}
+
+.titulo_form{
+	display: block;
+	margin-top:.5em;
+	margin-bottom:.5em;
+	font-size:1.5em;
+	color:#fff;
+}
+
+.menu-fixed{
+	position: fixed;
+    width: 100%;
+    background:linear-gradient(to top, #0d53b4 0%, #3575b9 100%) repeat scroll 0 0 rgba(0,0,0,0);
+    z-index: 99;
+    box-shadow: 3px 7px 20px #f1f1f1;
+}
+
+#button_send_message{
+	float:right;
+	background:rgba(0,0,0,0.3);
+	border:1px solid #fff;
+	color:#fff;
+	padding:1em;
+	border-radius:0px;
+	margin-top:1em;
 }
