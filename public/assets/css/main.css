@@ -28,9 +28,9 @@ color:white;
 #menu_principal li a{
 	color:#fff;
 }
-#menu_principal li.active a{
+/*#menu_principal li.active a{
 	color:#000 !important;
-}
+}*/
 #menu_principal li a:hover{
 	background: rgba(59, 137, 195, 0.9);
 }
@@ -189,4 +189,8 @@ color:white;
 	padding:1em;
 	border-radius:0px;
 	margin-top:1em;
+}
+
+#ventana_loader{
+	
 }

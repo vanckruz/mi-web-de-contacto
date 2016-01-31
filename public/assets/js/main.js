@@ -32,7 +32,8 @@ $(document).on("ready",function(){
     	$("#button_send_message").on("click",function(e){
     		e.preventDefault();
 
-	   		 $.ajax({
+	   		/* $.ajax({
+	   		 	headers:{"X-CSRF-TOKEN":$("#token").val()},
 				type	: "POST",
 				url		: $("#send_message").attr("action"),
 				data	: $("#send_message").serialize(),
@@ -42,7 +43,8 @@ $(document).on("ready",function(){
 				success : function(data) {
 					console.log(data);						
 				}
-			});
+			});*/
+    	$("#form_contacto").submit();
 
     	});
 

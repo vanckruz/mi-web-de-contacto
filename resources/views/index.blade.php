@@ -159,7 +159,7 @@
         </div>
       </div>
     </div>
-    <form action="{{url('/send_message') }}" id="form_contacto" method="post">
+    <form action="{{url('/send_message') }}" id="form_contacto" method="post" enctype="multipart/form-data">
       <div class="row">
         <div class="col-md-6 col-xs-12">
           <span for="" class="titulo_form">Nombre:</span>
@@ -177,7 +177,7 @@
         </div>
         <div class="col-md-6 col-xs-12">
           <span for="" class="titulo_form">País:</span>
-          <select name="pais" id="pais" class="form-control input_contacto" style="cursor:pointer;" required>
+          <select name="pais" id="pais" class="form-control" style="cursor:pointer;border-radius: 0;background:transparent;color:#fff;" required>
           </select>
         </div>
       </div>
@@ -205,11 +205,20 @@
       </div>
       <div class="row">
         <div class="col-xs-12">
+          <span for="" class="titulo_form">Adjuntar Imagen:</span>
+          <input type="file" name="imagen" id="imagen" class="form-control input_contacto" style="height:auto;cursor:pointer;padding:.5em !important;" accept="image/*">
+        </div>
+      </div>      
+      <div class="row">
+        <div class="col-xs-12">
           <button type="submit" id="button_send_message" class="btn ">Enviar</button>
         </div>
       </div>
     </form>
   </div>
 </div>
+
+<div id="ventana_loader">
 	
+</div>	
 @stop

@@ -52,16 +52,37 @@ return [
             'prefix'   => '',
         ],
 
-        'mysql' => [
+       /* 'mysql' => [
             'driver'    => 'mysql',
             'host'      => env('DB_HOST', 'localhost'),
-            'database'  => env('DB_DATABASE', 'forge'),
-            'username'  => env('DB_USERNAME', 'forge'),
-            'password'  => env('DB_PASSWORD', ''),
+            //'host'      => 'localhost',
+            'database'  => env('DB_DATABASE', 'u191076201_cruz'),
+            //'database'  => 'u191076201_cruz',
+            'username'  => env('DB_USERNAME', 'u191076201_yo'),
+            //'username'  => 'root',
+            'password'  => env('DB_PASSWORD', '1234567'),
+            //'password'  => '',
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
             'strict'    => false,
+        ],*/
+        'mysql' => [
+            'read' => [
+                'host' => 'localhost',
+                //'host' => 'mysql.hostinger.es',
+            ],
+            'write' => [
+                'host' => 'localhost'
+                //'host' => 'mysql.hostinger.es'
+            ],
+            'driver'    => 'mysql',
+            'database'  => 'u191076201_cruz',
+            'username'  => 'u191076201_yo',
+            'password'  => '1234567',
+            'charset'   => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix'    => '',
         ],
 
         'pgsql' => [
