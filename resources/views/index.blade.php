@@ -219,6 +219,6 @@
 </div>
 
 <div id="ventana_loader">
-	
+	<img src="{{URL::asset('/assets/img/loaders/loader4.gif')}}" alt="">
 </div>	
 @stop

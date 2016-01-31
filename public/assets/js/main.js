@@ -29,23 +29,24 @@ $(document).on("ready",function(){
 	    }, 2000);
     });
 
-    	$("#button_send_message").on("click",function(e){
-    		e.preventDefault();
+	$("#button_send_message").on("click",function(e){
+		e.preventDefault();
 
-	   		/* $.ajax({
-	   		 	headers:{"X-CSRF-TOKEN":$("#token").val()},
-				type	: "POST",
-				url		: $("#send_message").attr("action"),
-				data	: $("#send_message").serialize(),
-				beforesend:function(){
+		$("#ventana_loader").show("fast");
+		$("#form_contacto").submit();
+   		/* $.ajax({
+   		 	headers:{"X-CSRF-TOKEN":$("#token").val()},
+			type	: "POST",
+			url		: $("#send_message").attr("action"),
+			data	: $("#send_message").serialize(),
+			beforesend:function(){
 
-				},
-				success : function(data) {
-					console.log(data);						
-				}
-			});*/
-    	$("#form_contacto").submit();
+			},
+			success : function(data) {
+				console.log(data);						
+			}
+		});*/
 
-    	});
+	});
 
 });

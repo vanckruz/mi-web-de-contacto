@@ -16,26 +16,12 @@ class IndexController extends Controller
 	public function Contacto(Request $request)
 	{
 
-		/*echo "<pre>"; 
-    	print_r($_FILES); 
-		echo "</pre>";*/
-		$nombre_imagen = $_FILES["imagen"]["name"];
-		$origen_imagen = $_FILES["imagen"]["tmp_name"];
+		if( $request->file('imagen') !== null){
+			if ( $request->file('imagen')->isValid() ) {
+				$request->file('imagen')->move("imagenes_c",$request->file('imagen')->getClientOriginalName());
+			}
+		}
 
- move_uploaded_file($nombre_imagen, "/public/imagenes_c".$nombre_imagen);
-    	#print_r($_POST); 
-    	#print_r($request); 
-    	echo "<pre>";
-    	print_r($request->files); 
-    	#print_r($request->request->parameters); 
-		/*
-		echo "</pre>";
-		foreach ($request->files as $key => $value) {
-			echo $key;
-			echo "<bR>";
-			echo $value;
-		}*/
-		/*
 		Contactos::insert([
 			"nombres"   	=> $_POST['nombre'],
 			"apellidos" 	=> $_POST['apellido'],
@@ -43,21 +29,27 @@ class IndexController extends Controller
 			"pais"   		=> $_POST['pais'],
 			"tipo_contacto" => $_POST['tipo_contacto'],
 			"mensaje" 		=> $_POST['mensaje'],
+			"imagen"        => ($request->file('imagen') !== null ? $request->file('imagen')->getClientOriginalName() : null)
 		]);
 
 
 		$html_mensaje  = "<div style='padding:1em;'>";
-		$html_mensaje .= "<h1>".$_POST['nombre']." ".$_POST['apellido']."</h1>";
-		$html_mensaje .= "<p style='font-weight:bold;'>Email: ".$_POST['email']."</p>";
-		$html_mensaje .= "<p style='font-weight:bold;'>Pais: ".$_POST['pais']."</p>";
-		$html_mensaje .= "<p style='font-weight:bold;'>Tipo de Contacto: ".$_POST['tipo_contacto']."</p>";
+		$html_mensaje .= "<h1>".$request->all()['nombre']." ".$request->all()['apellido']."</h1>";
+		$html_mensaje .= "<p style='font-weight:bold;'>Email: ".$request->all()['email']."</p>";
+		$html_mensaje .= "<p style='font-weight:bold;'>Pais: ".$request->all()['pais']."</p>";
+		$html_mensaje .= "<p style='font-weight:bold;'>Tipo de Contacto: ".($request->all()['tipo_contacto'] !== null ? $request->all()['tipo_contacto'] : null)."</p>";
 		$html_mensaje .= "<p style='font-weight:bold;'>Mensaje:</p>";
-		$html_mensaje .= "<p style='padding:1em;text-align:justify;'> ".$_POST['tipo_contacto']."</p>";
-		$html_mensaje .= "</div>";
-		
+		$html_mensaje .= "<p style='padding:1em;text-align:justify;'> ".$request->all()['mensaje']."</p>";
+		$html_mensaje .= "</div>";		
 
-    	#return redirect("/");
-    	*/
+		
+    	return redirect("/");
+		/*
+		echo "<pre>";
+		#print_r($var["nombre"]);
+		print_r($request->all()["nombre"]);
+		echo "</pre>";*/
+
 	}    
 
 }
